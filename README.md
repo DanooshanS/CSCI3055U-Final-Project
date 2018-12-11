@@ -1,6 +1,6 @@
-Name: Danooshan Sureshkumar
-ID: 100625388
-Course: CSCI3055U
+Name: Danooshan Sureshkumar  
+ID: 100625388  
+Course: CSCI3055U  
 
 # CSCI3055U-Final-Project
 This is a github repository for my final project in CSCI3055U
