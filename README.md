@@ -38,8 +38,19 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
                        interactive shell, then you can run code simply with: elixirc <filename>
       
 ## Syntax:  
-Example code  
+     Data types: See example1.ex for examples
+     
+          - Integer: 15; Can be of infinite size unlike other languages
+          - Float: 3.14; Can be accurate up to 16 digits
+          - Atom: :Bob; 
+          - String: "Hello";
+          
+          - Tuple: {1, b, 3.00, :Four};
+          - List: [1, 2, 3, 4];
+          - Map: %{"a" -> 1, 2 -> "B"};
+          
+     Variables: See example2.ex for examples
+          Once a variable of any type is defined, it CANNOT be changed.
+```elixir
+variablename = data
 ```
-IO.puts "Hello world"
-```
-
