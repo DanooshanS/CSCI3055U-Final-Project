@@ -24,15 +24,22 @@ Description: Elixir is a dynamic functional general purpose programming language
           3)Run in terminal: sudo apt-get install esl-erlang  
           4)Run in terminal: sudo apt-get install elixir  
 ## Libraries:
-Elixirs standard library is known as Elixir and is installed along with it.   
+Elixirs standard library is known as Elixir and is installed along with it, no code is required to utilize the functions.   
 
 ## Compiling and running:
      Once installed, in command prompt or terminal navigate to directory with elixir files (<filename>.ex)
           1) Run: iex 
           This will open an interactive shell for running code.
-          2) Compile: c(<filename>)
+          2) Compile: c("<filename>")
                - if program does not use modules: Any code written in the file will be ran.
                - if program does use modules: Code can be called using <Module name>.<function name> will run any code 
                  written within the function.
-
+          ALTERNATIVE: If your program does not use modules, code could be ran directly from the terminal instead of within the the
+                       interactive shell, then you can run code simply with: elixirc <filename>
+      
+## Syntax:
+     Example code
+     ```
+     IO.puts "Hello world"
+     ```
 
