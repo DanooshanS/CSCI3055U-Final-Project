@@ -37,9 +37,9 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
           ALTERNATIVE: If your program does not use modules, code could be ran directly from the terminal instead of within the the
                        interactive shell, then you can run code simply with: elixirc <filename>
       
-## Syntax:
-     Example code
-     ```
-     IO.puts "Hello world"
-     ```
+## Syntax:  
+Example code  
+```
+IO.puts "Hello world"
+```
 
