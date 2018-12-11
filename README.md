@@ -38,6 +38,7 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
                        interactive shell, then you can run code simply with: elixirc <filename>
       
 ## Syntax:  
+     Modules: 
      Data types: See example1.ex for examples
      
           - Integer: 15; Can be of infinite size unlike other languages
@@ -45,22 +46,29 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
           - Atom: :Bob; 
           - String: "Hello";
           
-          - Tuple: {1, b, 3.00, :Four};
+          - Tuple: {1, "b", 3.00, :Four};
           - List: [1, 2, 3, 4];
           - Map: %{"a" -> 1, 2 -> "B"};
           
      Variables: See example2.ex for examples
-          Once a variable of any type is defined, it CANNOT be changed. 
+                Once a variable of any type is defined, it CANNOT be changed. 
 ```elixir
 variablename = data
 ```
      Getting input or producing output: See example3.ex for examples
+     Data can be outputted using the put function by using #{}
 ```elixir
 IO.puts "Hello World"
 variable = IO.gets "Enter variable here: "
+IO.puts "Variables : #{variable}"
 ```
      Functions: See example3.ex for examples
+                To call functions they can be called by name, or values can be passed directly using |>
 ```elixir
+IO.puts "This function: #{functionname(parameters)}"
+     #or functions can be called by:
+"Hello World" |> IO.puts
+# -> This prints Hello World by passing a string to the IO.puts function
 def functionname do
      ...
 end
@@ -69,4 +77,5 @@ def functionname(parameters) do
      ...
 end
 ```
+         
      
