@@ -50,7 +50,23 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
           - Map: %{"a" -> 1, 2 -> "B"};
           
      Variables: See example2.ex for examples
-          Once a variable of any type is defined, it CANNOT be changed.
+          Once a variable of any type is defined, it CANNOT be changed. 
 ```elixir
 variablename = data
 ```
+     Getting input or producing output: See example3.ex for examples
+```elixir
+IO.puts "Hello World"
+variable = IO.gets "Enter variable here: "
+```
+     Functions: See example3.ex for examples
+```elixir
+def functionname do
+     ...
+end
+     #or
+def functionname(parameters) do
+     ...
+end
+```
+     
