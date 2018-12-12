@@ -184,3 +184,22 @@ def loop2([Head|Tail]) do
      end
 end
 ```
+     Exception Handling: See example9.ex for examples
+```elixir
+integer = 4
+err = try do
+     integer / 0
+rescue
+     ArithmeticError -> "Cannot divide by 0"
+end
+```
+     Specialized Library: File
+                         Multiple methods for File available for use can be found at https://hexdocs.pm/elixir/File.html
+```elixir
+#ASSUMING helloworld.txt exists and contains one line "Hello World":
+FileName = "helloworld.txt"
+FileName2 = "oijoiadjaoisdjas"
+File.read(FileName) #This returns {:ok, "Hello World"}
+File.read(FileName2) #This returns {:error, reason}
+File.read!(FileName) #This returns "Hello World"
+```
