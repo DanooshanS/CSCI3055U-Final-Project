@@ -118,4 +118,19 @@ end
 
 #An example of a Ternary:
 IO.puts "Ternary : #{if a == b, do: "A is equal to B!", else: "A is not equal to B!"}"
-```     
+```
+     Anonymous Functions: See example5.ex for examples
+                          NOTE: A . is required between the function name and parameters when calling an anonymous function. 
+```elixir
+sum = fn x y -> x + y end
+IO.puts "#{sum.(5,5)}" #Would print 10
+#or
+sum = &(&1 + &2)
+IO.puts "#{sum.(5, 5)}" #Would print 10
+#or
+sum = fn 
+     {x, y} -> x + y
+     {x, y, z} -> x + y + z
+end
+IO.puts "#{sum.(5,5)} and #{sum.(5,5,5)}" #Would print 10 and 15, can make different function definitions with different parameters.
+```
