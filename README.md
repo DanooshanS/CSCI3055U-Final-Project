@@ -38,12 +38,15 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
                        interactive shell, then you can run code simply with: elixirc <filename>
       
 ## Syntax:  
-     Modules: Contains all of the elixir functions you write.
+     Modules: Similar to packages, contains all of the elixir functions you write.
               MUST begin with an uppercase letter.
+              
 ```elixir
+require externalModule #imports all functions from a different module
 defmodule Module do
      ...
 end
+
 ```
      Data types: See example1.ex for examples
      
