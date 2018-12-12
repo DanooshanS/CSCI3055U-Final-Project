@@ -39,6 +39,7 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
       
 ## Syntax:  
      Modules: Similar to packages, contains all of the elixir functions you write.
+              Can use require to import external modules
               MUST begin with an uppercase letter.
               
 ```elixir
