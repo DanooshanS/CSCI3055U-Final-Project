@@ -56,6 +56,14 @@ end
           - List: [1, 2, 3, 4];
           - Map: %{"a" -> 1, 2 -> "B"};
           
+     Math:
+          Addition: a + b
+          Subtraction: a- b
+          Multiplication: a * b
+          Division: a / b
+          Integer Division: div(a,b)
+          Remainder: rem(a,b)
+          
      Variables: See example2.ex for examples. 
                 Once a variable of any type is defined, it CANNOT be changed. 
                 MUST begin with an _ or lowercase letter
@@ -63,7 +71,7 @@ end
 variablename = data
 ```
      Getting input or producing output: See example3.ex for examples
-     Data can be outputted using the put function by using #{}
+                                        Data can be outputted using the put function by using #{}
 ```elixir
 IO.puts "Hello World"
 variable = IO.gets "Enter variable here: "
@@ -143,4 +151,36 @@ sequence3 = Enum.map(sequence, fn x -> x + 1 end)
 sum = Enum.sum(sequence2)
 IO.puts "sequence 3 = #{sequence3} and sum = #{sum}" #Would print: sequence3 = [2,3,4] and sum = 15
 ```
+     Transformation of data: See example7.ex for examples
+                             Multiple different transformations, critical ones would be: <> and [Head | Tail]
+```elixir
+string1 = "Hello"
+string2 = "World"
+string3 = string1 <> " " <> string2 #<> is the operator used for concatenate strings
+IO.puts = "#{string3}" #Prints Hello World
+list = [1, 2, 3]
+[Start | Rest] = list #Start will become the first element in list, and Rest will be a list of the elements after the first.
+IO.puts "#{Start}, #{Rest}" 
+```
+     Iteration: See example8.ex for examples
+                Elixir does not include for loops because variables cannot be changed, therefore iteration is impossible.
+                Therefore, the only method of iteration is recursion.
+                    - Base cases can either be made as if's or seperate functions of the same name (depends on the problem to solve)
+```elixir
+list = ["Random", "words", "go", "here"]
 
+def loop([Head | Tail]) do #Pops the first element in the list off and prints it, passes the remaining list to the same function
+     IO.puts "#{Head}"
+     loop(Tail)
+end
+def loop([]), do: nil #Is called once the list is empty
+
+list2 = [1,3,5,6]
+def loop2([Head|Tail]) do
+     if (rem(Head,2)) == 0 do
+          IO.puts "Reached a positive number!"
+     else do
+          loop2(Tail)
+     end
+end
+```
