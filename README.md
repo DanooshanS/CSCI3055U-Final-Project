@@ -69,14 +69,14 @@ end
 ```elixir
 variablename = data
 ```
-     Getting input or producing output: See example3.ex for examples
+     Getting input or producing output: See example2.ex for examples
                                         Data can be outputted using the put function by using #{}
 ```elixir
 IO.puts "Hello World"
 variable = IO.gets "Enter variable here: "
 IO.puts "Variables : #{variable}"
 ```
-     Functions: See example2.ex for examples
+     Functions: See example3.ex for examples
                 MUST begin with a lowercase letter
                 To call functions they can be called by name, or values can be passed directly using |>
 ```elixir
@@ -92,7 +92,7 @@ def functionname(parameters) do
      ...
 end
 ```
-     Conditionals: See example3.ex for examples
+     Conditionals: See example4.ex for examples
                    Includes common comparitors such as: ==, >=, <=, !=, <, >
                    Includes uncommon comparitors: ===,!==
                                         These comparitors compare value AND type
@@ -126,7 +126,7 @@ end
 #An example of a Ternary:
 IO.puts "Ternary : #{if a == b, do: "A is equal to B!", else: "A is not equal to B!"}"
 ```
-     Anonymous Functions: See example4.ex for examples
+     Anonymous Functions: See example5.ex for examples
                           NOTE: A . is required between the function name and parameters when calling an anonymous function. 
 ```elixir
 sum = fn x y -> x + y end
@@ -141,7 +141,7 @@ sum = fn
 end
 IO.puts "#{sum.(5,5)} and #{sum.(5,5,5)}" #Would print 10 and 15, can make different function definitions with different parameters.
 ```
-     Enumerables: See example5.ex for examples
+     Enumerables: See example6.ex for examples
                   MANY built in functions for Enum, see https://hexdocs.pm/elixir/Enum.html for more information.
 ```elixir
 sequence = [1,2,3]
