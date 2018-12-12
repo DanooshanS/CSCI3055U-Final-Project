@@ -134,3 +134,13 @@ sum = fn
 end
 IO.puts "#{sum.(5,5)} and #{sum.(5,5,5)}" #Would print 10 and 15, can make different function definitions with different parameters.
 ```
+     Enumerables: See example6.ex for examples
+                  MANY built in functions for Enum, see https://hexdocs.pm/elixir/Enum.html for more information.
+```elixir
+sequence = [1,2,3]
+sequence2 = [1..5]
+sequence3 = Enum.map(sequence, fn x -> x + 1 end)
+sum = Enum.sum(sequence2)
+IO.puts "sequence 3 = #{sequence3} and sum = #{sum}" #Would print: sequence3 = [2,3,4] and sum = 15
+```
+
