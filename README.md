@@ -203,3 +203,5 @@ File.read(FileName) #This returns {:ok, "Hello World"}
 File.read(FileName2) #This returns {:error, reason}
 File.read!(FileName) #This returns "Hello World"
 ```
+
+     For more information about Elixir and its built in functionality refer to https://hexdocs.pm/elixir/Kernel.html
