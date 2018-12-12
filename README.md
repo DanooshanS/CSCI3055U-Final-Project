@@ -177,7 +177,7 @@ list2 = [1,3,5,6]
 def loop2([Head|Tail]) do
      if (rem(Head,2)) == 0 do
           IO.puts "Reached a positive number!"
-     else do
+     else 
           loop2(Tail)
      end
 end
