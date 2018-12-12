@@ -156,9 +156,8 @@ IO.puts "sequence 3 = #{sequence3} and sum = #{sum}" #Would print: sequence3 = [
 string1 = "Hello"
 string2 = "World"
 string3 = string1 <> " " <> string2 #<> is the operator used for concatenate strings
-IO.puts = "#{string3}" #Prints Hello World
-list = [1, 2, 3]
-[Start | Rest] = list #Start will become the first element in list, and Rest will be a list of the elements after the first.
+IO.puts "#{string3}" #Prints Hello World
+[Start | Rest] = [1,2,3] #Start will become the first element in list, and Rest will be a list of the elements after the first.
 IO.puts "#{Start}, #{Rest}" 
 ```
      Iteration: See example7.ex for examples
