@@ -101,13 +101,13 @@ end
 ```elixir
 if a == b do
      #Do stuff if a == b
-else do
+else 
      #Do stuff if a != b
 end
 
 unless a == b do
      #Do stuff if a != b
-else do
+else 
      #Do stuff if a == b
 end
 
