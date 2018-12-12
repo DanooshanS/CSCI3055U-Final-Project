@@ -38,7 +38,13 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
                        interactive shell, then you can run code simply with: elixirc <filename>
       
 ## Syntax:  
-     Modules: 
+     Modules: Contains all of the elixir functions you write.
+              MUST begin with an uppercase letter.
+```elixir
+defmodule Module do
+     ...
+end
+```
      Data types: See example1.ex for examples
      
           - Integer: 15; Can be of infinite size unlike other languages
@@ -50,8 +56,9 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
           - List: [1, 2, 3, 4];
           - Map: %{"a" -> 1, 2 -> "B"};
           
-     Variables: See example2.ex for examples
+     Variables: See example2.ex for examples. 
                 Once a variable of any type is defined, it CANNOT be changed. 
+                MUST begin with an _ or lowercase letter
 ```elixir
 variablename = data
 ```
@@ -63,6 +70,7 @@ variable = IO.gets "Enter variable here: "
 IO.puts "Variables : #{variable}"
 ```
      Functions: See example3.ex for examples
+                MUST begin with a lowercase letter
                 To call functions they can be called by name, or values can be passed directly using |>
 ```elixir
 IO.puts "This function: #{functionname(parameters)}"
@@ -77,5 +85,37 @@ def functionname(parameters) do
      ...
 end
 ```
-         
-     
+     Conditionals: See example4.ex for examples
+                   Includes common comparitors such as: ==, >=, <=, !=, <, >
+                   Includes uncommon comparitors: ===,!==
+                                        These comparitors compare value AND type
+                   Cond and case will return the first instance which is true.
+                   A ternary must contain an if, do:, and else:
+```elixir
+if a == b do
+     #Do stuff if a == b
+else do
+     #Do stuff if a != b
+end
+
+unless a == b do
+     #Do stuff if a != b
+else do
+     #Do stuff if a == b
+end
+
+cond do
+     a == b -> IO.puts "They're equal."
+     a != b -> IO.puts "They're not equal"
+     true -> IO.puts "Default" #This acts as the default option.
+end
+
+case data do #Checks if data is equal to any of the cases
+    1 -> IO.puts "#{data} = 1"
+    2 -> IO.puts "#{data} = 2"
+    _ -> IO.puts "None of the options were #{data}" #This acts as the default option
+end
+
+#An example of a Ternary:
+IO.puts "Ternary : #{if a == b, do: "A is equal to B!", else: "A is not equal to B!"}"
+```     
