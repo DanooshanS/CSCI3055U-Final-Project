@@ -64,8 +64,7 @@ end
           Integer Division: div(a,b)
           Remainder: rem(a,b)
           
-     Variables: See example2.ex for examples. 
-                Once a variable of any type is defined, it CANNOT be changed. 
+     Variables: Once a variable of any type is defined, it CANNOT be changed. 
                 MUST begin with an _ or lowercase letter
 ```elixir
 variablename = data
@@ -77,7 +76,7 @@ IO.puts "Hello World"
 variable = IO.gets "Enter variable here: "
 IO.puts "Variables : #{variable}"
 ```
-     Functions: See example3.ex for examples
+     Functions: See example2.ex for examples
                 MUST begin with a lowercase letter
                 To call functions they can be called by name, or values can be passed directly using |>
 ```elixir
@@ -93,7 +92,7 @@ def functionname(parameters) do
      ...
 end
 ```
-     Conditionals: See example4.ex for examples
+     Conditionals: See example3.ex for examples
                    Includes common comparitors such as: ==, >=, <=, !=, <, >
                    Includes uncommon comparitors: ===,!==
                                         These comparitors compare value AND type
@@ -127,7 +126,7 @@ end
 #An example of a Ternary:
 IO.puts "Ternary : #{if a == b, do: "A is equal to B!", else: "A is not equal to B!"}"
 ```
-     Anonymous Functions: See example5.ex for examples
+     Anonymous Functions: See example4.ex for examples
                           NOTE: A . is required between the function name and parameters when calling an anonymous function. 
 ```elixir
 sum = fn x y -> x + y end
@@ -142,7 +141,7 @@ sum = fn
 end
 IO.puts "#{sum.(5,5)} and #{sum.(5,5,5)}" #Would print 10 and 15, can make different function definitions with different parameters.
 ```
-     Enumerables: See example6.ex for examples
+     Enumerables: See example5.ex for examples
                   MANY built in functions for Enum, see https://hexdocs.pm/elixir/Enum.html for more information.
 ```elixir
 sequence = [1,2,3]
@@ -151,7 +150,7 @@ sequence3 = Enum.map(sequence, fn x -> x + 1 end)
 sum = Enum.sum(sequence2)
 IO.puts "sequence 3 = #{sequence3} and sum = #{sum}" #Would print: sequence3 = [2,3,4] and sum = 15
 ```
-     Transformation of data: See example7.ex for examples
+     Transformation of data: See example6.ex for examples
                              Multiple different transformations, critical ones would be: <> and [Head | Tail]
 ```elixir
 string1 = "Hello"
@@ -162,7 +161,7 @@ list = [1, 2, 3]
 [Start | Rest] = list #Start will become the first element in list, and Rest will be a list of the elements after the first.
 IO.puts "#{Start}, #{Rest}" 
 ```
-     Iteration: See example8.ex for examples
+     Iteration: See example7.ex for examples
                 Elixir does not include for loops because variables cannot be changed, therefore iteration is impossible.
                 Therefore, the only method of iteration is recursion.
                     - Base cases can either be made as if's or seperate functions of the same name (depends on the problem to solve)
@@ -184,7 +183,7 @@ def loop2([Head|Tail]) do
      end
 end
 ```
-     Exception Handling: See example9.ex for examples
+     Exception Handling: See example8.ex for examples
 ```elixir
 integer = 4
 err = try do
@@ -193,8 +192,8 @@ rescue
      ArithmeticError -> "Cannot divide by 0"
 end
 ```
-     Specialized Library: File
-                         Multiple methods for File available for use can be found at https://hexdocs.pm/elixir/File.html
+     Specialized Library: File ; See example9.ex for examples
+                          Multiple methods for File available for use can be found at https://hexdocs.pm/elixir/File.html
 ```elixir
 #ASSUMING helloworld.txt exists and contains one line "Hello World":
 FileName = "helloworld.txt"
