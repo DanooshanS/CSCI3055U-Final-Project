@@ -42,7 +42,7 @@ Elixirs standard library is known as Elixir and is installed along with it, no c
               MUST begin with an uppercase letter.
               
 ```elixir
-require externalModule #imports all functions from a different module
+require ExternalModule #imports all functions from a different module
 defmodule Module do
      ...
 end
